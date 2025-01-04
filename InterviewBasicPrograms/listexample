@@ -1,0 +1,21 @@
+# geminustech interview program
+# generate multiple lists from given list which sum is 10
+def foo(param):
+    temp = []
+    Addition = 0
+
+    for j in range (0,len(param)):
+      for i in range (j,len(param)):
+        temp.append(param[i])
+        Addition = Addition + param[i]
+        # print(Addition)
+        if Addition == 10:
+          print(temp)
+          temp = []
+          Addition = 0
+          break    
+
+  
+if __name__ == '__main__':
+  param=[1,2,1,1,2,3,1,2,3,1,2,2]
+  foo(param)
